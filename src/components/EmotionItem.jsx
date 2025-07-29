@@ -1,9 +1,15 @@
 import "./EmotionItem.css";
 import { getEmotionImg } from "../util/get-emotion-image";
 
-export default function EmotionItem({ emotionId, emotionName, isSelected }) {
+export default function EmotionItem({
+  emotionId,
+  emotionName,
+  isSelected,
+  onClick,
+}) {
   return (
     <div
+      onClick={onClick}
       className={`EmotionItem ${
         isSelected ? `EmotionItem_on_${emotionId}` : ""
       }`}
